@@ -1,7 +1,7 @@
 # TicTacToe
-for freecodecamp.com
-uses AngularJS
-based on anuj gakhar's
+for freecodecamp.com<br>
+uses AngularJS<br>
+based on anuj gakhar's<br>
 http://www.anujgakhar.com/2013/06/16/a-simple-tictactoe-game-with-angularjs/
 https://github.com/anujgakhar/tictactoe
 
