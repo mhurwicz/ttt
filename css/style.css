@@ -1,0 +1,71 @@
+#who_starts {
+  margin-right: 50%;
+  margin-bottom: 20px;
+ 	text-align:left;
+  font-size: .8em;
+}
+.wrapper{
+	margin:0px auto;
+	text-align:center;
+	background:#FFF;
+	border:3px solid #ddd;
+	padding:25px;
+	width:414px;
+}
+.action-bar{
+	margin-bottom:10px;
+}
+.status-bar{
+	height:25px;
+  width: 50%;
+	line-height:25px;
+	font-weight:bold;
+	border:4px black;
+  background-color:#EEE;
+  margin:auto;
+  border-radius:25px;
+}
+.board{
+	position: relative;
+  margin: auto;
+  margin-top: 30px;
+  background: #FFF;
+  padding: 2px;
+}
+.row{
+	display:table-row;
+}
+.col{
+	width:136px;
+	height:136px;
+	display:table-cell;
+	background-color:#FFF;
+	border-bottom:8px solid #999;
+	border-right:8px solid #999;
+	cursor:pointer;
+}
+.col .token{
+	font-size:84px;
+	line-height: 136px;
+	color:#999;
+}
+.col .token.won{
+	color:green;
+  animation: shake 400ms ease-in-out;
+}
+@keyframes shake {
+  0% {transform: translateX(0);}
+  12.5% {transform: translateX(-6px) rotateY(-5deg)}
+  37.5% {transform: translateX(5px) rotateY(4deg)}
+  62.5% {transform: translateX(-3px) rotateY(-2deg)}
+  87.5% {transform: translateX(2px) rotateY(1deg)}
+  100% {transform: translateX(0)}
+}
+.col:last-child{
+	border-top:0;
+	border-right:0;
+}
+.row:last-child > .col{
+	border-bottom:0;
+}
+

@@ -1,0 +1,20 @@
+<div class="wrapper">
+	<div class="action-bar">
+		<code id="who_starts"><input type="checkbox" value="{{computer_starts}}" ng-model="computer_starts" ng-checked="computer_starts" />Computer goes first</code><br>
+		<button id="start-game" ng-click="startGame()">GO!</button>
+	</div>
+
+	<div class="tictactoe">
+		<div class="board">
+			<div ng-repeat="row in grid track by $index" class="row">
+				<div ng-repeat="col in grid track by $index" data-col="{{$index}}" data-row="{{$parent.$index}}" class="col" ng-click="makeMove($index, $parent.$index)">
+					<span ng-class="{'token':true, 'won':isSquareInWinningCombo($index, $parent.$index)}">{{getSquaretoken($index, $parent.$index)}}</span>
+				</div>
+			</div>
+		</div>
+	</div>
+<br>
+	<code><div class="status-bar" ng-show="status_message.length > 0">{{status_message}}</div></code>
+</div>
+<br>
+  based on <a href="http://www.anujgakhar.com/2013/06/16/a-simple-tictactoe-game-with-angularjs/" target="_blank">Anuj Gakhar's Angular TicTacToe</a>
